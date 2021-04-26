@@ -40,7 +40,7 @@ client.on("message", function(message){
             message.reply(`Hi ${commandBody}, I'm a bot`);
             timedOut.push(message.member.id);
             setTimeout(function(){
-                timedOut = timedOut.filter(id => value != message.member.id)
+                timedOut = timedOut.filter(id => id != message.member.id)
             }, 60000)
         }
     } else if (timedOut.includes(message.member.id)) {
